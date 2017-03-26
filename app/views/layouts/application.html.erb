@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Property Investment - <%= full_title(yield(:title))%></title>
+    <%= render 'layouts/default_rails' %>
+    <%= render 'layouts/shim' %>
+    <meta name = "viewport" content ="width=device-width, initial-scale=1">
+
+  </head>
+
+  <body>
+  
+  	<%= render 'layouts/header' %>
+  	<%= render 'properties/search_menu' %>
+  
+  	<div class="container">
+
+      <div class="row main_window">
+
+      <% if yield(:title) === "Home" %>
+        
+        <div class="col-md-3 col-xs-3">
+
+          <%= render 'layouts/topprop' %>
+        
+        </div>
+        
+        <div class="col-md-3 col-xs-3 ">
+        
+          <%= render 'layouts/topprop' %>
+
+        </div>
+        
+        <div class="col-md-3 col-xs-3">
+          
+          <%= render 'layouts/topprop' %>
+
+        </div>
+
+         <div class="col-md-3 col-xs-3 ">
+          tresc boczna
+        </div>
+
+        <% else %>
+
+          <%= yield %>
+
+        <% end %>
+       
+      </div>
+    	
+    	<%= render 'layouts/footer' %>
+  	</div>
+  
+  </body>
+
+</html>

@@ -1,0 +1,55 @@
+<% provide(:title, "Sell") %>
+
+<%= form_for(@property) do |f| %>
+	
+	<h1>Property details</h1>
+	<div class="row">
+		<div class="col-md-4 col-xs-4">
+			<h2>Address:</h2>
+			<center>
+				<table>				
+					<tr>	
+						<td><%= f.label :street %>  </td>
+						<td><%= f.text_field :street, placeholder: "Street of property.." %></td>
+					</tr>
+
+					<tr>
+						<td><%= f.label :city %>  </td>
+						<td><%= f.text_field :address, placeholder: "Write city of property.." %></td>
+					</tr>
+					<tr>
+						<td><%= f.label :country %>  </td>
+						<td><%= f.text_field :country, placeholder: "Country of property.." %></td>
+					</tr>
+
+				</table>
+			</center>
+		</div>
+
+		<div class="col-md-4 col-xs-4">
+			<h2>Description:</h2>
+			<center>
+				<table>				
+					<tr>	
+						<td><%= f.label :title %></td>
+						<td cellspan="2"><%= f.text_field :description, placeholder: "Up to 10 words..." %></td>
+					</tr>
+					<tr>
+						<td cellspan="2"><%= f.label :description %></td>
+						<td><%= f.text_area :l_desc, placeholder: "Write about property..." %></td>
+					</tr>
+				</table>
+			</center>
+
+		</div>
+		<div class="col-md-4 col-xs-4">
+			<h2>Upload Images:</h2>
+			
+		</div>
+	</div>
+	<div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+		<center><%= f.submit "Publish your advert", class: "btn btn-primary" %></center>
+	</div>
+<% end %>
+
+

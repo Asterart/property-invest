@@ -1,0 +1,11 @@
+<% provide(:title, "Buy") %>
+
+<% @properties.each do |f| %>
+	 <div class="col-md-3 col-xs-6">
+	 	<div class="advertisment_box">
+			<p><h2><%=h f.country %></p>
+			<p><%=h f.address %></h2></p>
+		  <%=h f.description %>
+		 </div>
+	</div>
+<% end %>

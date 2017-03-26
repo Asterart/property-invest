@@ -1,0 +1,7 @@
+<% r2 = @properties.size %>
+<% r = rand(0..r2) %>
+ 
+<div class="advertisment_box">
+	<h2><%=h @properties[r].address %></h2>
+  <p><%=h @properties[r].description %></p>
+</div>
