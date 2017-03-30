@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/share', to: 'properties#share'
 
 
-  resources :properties 
+  resources :properties
 
 end

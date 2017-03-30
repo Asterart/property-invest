@@ -7,6 +7,12 @@ class PropertiesController < ApplicationController
 
 	def show
 		@properties = Property.all
+		
+		if params[:search]
+			@properties = Property.search(params[:search])
+		else
+			@properties = Property.all
+		end
 
 		respond_to do |f|
 			f.html
@@ -22,6 +28,7 @@ class PropertiesController < ApplicationController
 		else
 			render 'new'
 		end
+
 	end
 
 	def share
@@ -35,6 +42,5 @@ private
   	def property_params
   		params.require(:property).permit(:address, :description, :street, :country, :l_desc)
   	end
-
 
 end

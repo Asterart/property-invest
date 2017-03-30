@@ -5,9 +5,9 @@
 			<span>Good property is a good investition</span>
 			<h4>Find by location</h4>
 			
-			<%= form_tag(sell_path, :method => "get") do %> 
+			<%= form_tag(buy_path, :method => "get") do %> 
 				<%= text_field_tag :search, params[:search], placeholder: "e.g. 'London', 'Warszawa' or 'USA'", class: "search_field"%>
-				<%= submit_tag 'Search', :name => nil, class: "search_btn" %>
+				<%= submit_tag 'Search', class: "search_btn" %>
 			<% end %>
 			
 		</div>
